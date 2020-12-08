@@ -119,9 +119,9 @@ public class UserAuthenticationService {
   private boolean isEmailInUse(final String email) {
     return userDao.getUserByEmail(email) != null;
   }
-  public static void main(String[] args) {
-	  String encryptedPassword =
-		        passwordCryptographyProvider.encrypt("database_password", "8Xt6jxoCI3MWsVaKY/1ySAp2qzlb2Z7P89+vDrb1o6U=");
-	  System.out.println(encryptedPassword);
-}
+//  public static void main(String[] args) {
+//	  String encryptedPassword =
+//		        passwordCryptographyProvider.encrypt("database_password", "8Xt6jxoCI3MWsVaKY/1ySAp2qzlb2Z7P89+vDrb1o6U=");
+//	  System.out.println(encryptedPassword);
+//}
 }
