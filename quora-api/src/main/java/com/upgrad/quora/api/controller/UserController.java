@@ -15,7 +15,6 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import org.springframework.util.Base64Utils;
 import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -114,17 +113,17 @@ public class UserController {
     return new ResponseEntity<SignoutResponse>(signoutResponse, HttpStatus.OK);
   }
   
-  public static void main(String[] args) {
-	  String authString = "Authorization: Basic " +
-              Base64Utils.encodeToString(
-                      String.format("%s:%s", "abhi","507FF5FED1CAC746")
-                              .getBytes()
-              );
-	  
-	  byte[] decode = Base64.getDecoder().decode(authString.split("Basic ")[1]);
-	    String decodedText = new String(decode);
-	    System.out.println(decodedText);
-	    String[] decodedArray = decodedText.split(":");
-	  System.out.println(authString);
-}
+//  public static void main(String[] args) {
+//	  String authString = "Authorization: Basic " +
+//              Base64Utils.encodeToString(
+//                      String.format("%s:%s", "database_username","database_password")
+//                              .getBytes()
+//              );
+//
+//	  byte[] decode = Base64.getDecoder().decode(authString.split("Basic ")[1]);
+//	    String decodedText = new String(decode);
+//	    System.out.println(decodedText);
+//	    String[] decodedArray = decodedText.split(":");
+//	  System.out.println(authString);
+//}
 }
